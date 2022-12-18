@@ -1,8 +1,10 @@
 class ImageModel {
-  String? data;
+  String? data1;
+  String? data2;
+
   String? text;
 
-  ImageModel({this.data, this.text});
+  ImageModel({this.data1, this.data2, this.text});
 
   // ImageModel.fromJson(Map<String, dynamic> json) {
   //   data = json['data'];
@@ -11,8 +13,9 @@ class ImageModel {
 
   factory ImageModel.fromJson(Map<String, dynamic> json) {
     return ImageModel(
-      data: json['data'],
-      text: json['text'],
+      data1: json['data1'] ?? 'null',
+      data2: json['data2'] ?? 'null',
+      text: json['text'] ?? 'null',
     );
   }
 

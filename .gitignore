@@ -32,8 +32,7 @@ migrate_working_dir/
 .pub/
 /build/
 lib/constants.dart
-lib/controller/controller.dart
-lib/screens/get_image.dart
+lib/screens/show_image.dart
 server/.env
 
 # Web related

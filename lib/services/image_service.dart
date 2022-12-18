@@ -39,7 +39,7 @@ class ImageService {
 
       // return service.map((json) => ImageModel.fromJson(json)).toList();
 
-      return ImageModel.fromJson(jsonDecode(resp));
+      return ImageModel.fromJson(services);
       //
     } else {
       throw Exception('${response.statusCode}');

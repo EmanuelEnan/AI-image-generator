@@ -12,16 +12,19 @@ const generateImage = async (req, res) => {
     try {
         const response = await openai.createImage({
             prompt: prompt,
-            n: 1,
+            n: 2,
             size: '512x512',
         })
 
-        const imageUrl = response.data.data[0].url
+        const imageUrl1 = response.data.data[0].url
+        const imageUrl2 = response.data.data[1].url
+
 
         res.status(200).json({
             // success: true,
             text: 'image created',
-            data: imageUrl,
+            data1: imageUrl1,
+            data2: imageUrl2
         });
     } catch (error) {
         if (error.response) {
