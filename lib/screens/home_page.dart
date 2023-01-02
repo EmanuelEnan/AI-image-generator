@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'get_image.dart';
-import 'show_image.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -38,7 +37,7 @@ class HomePage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   var prompt = promptController.text;
-                  var size = sizeController.text;
+                  // var size = sizeController.text;
                   prompt.isNotEmpty
                       ? Navigator.push(
                           context,

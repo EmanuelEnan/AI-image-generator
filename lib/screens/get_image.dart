@@ -29,31 +29,37 @@ class _GetImageState extends State<GetImage> {
       appBar: AppBar(
         title: const Text('Image'),
       ),
-      body: Obx(() => controller.isLoading.value
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
-          : ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Center(
-                  child: Image.network(
-                    controller.imageModel!.data1!,
-                    height: 500,
-                    width: 400,
-                    fit: BoxFit.fill,
+      body: Obx(
+        () => controller.isLoading.value
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : ListView(
+                padding: const EdgeInsets.all(10),
+                // scrollDirection: Axis.horizontal,
+                children: [
+                  Center(
+                    child: Image.network(
+                      controller.imageModel!.data1!,
+                      // height: 500,
+                      // width: 400,
+                      // fit: BoxFit.fill,
+                    ),
                   ),
-                ),
-                Center(
-                  child: Image.network(
-                    controller.imageModel!.data2!,
-                    height: 500,
-                    width: 400,
-                    fit: BoxFit.fill,
+                  const SizedBox(
+                    height: 10,
                   ),
-                ),
-              ],
-            )),
+                  Center(
+                    child: Image.network(
+                      controller.imageModel!.data2!,
+                      // height: 500,
+                      // width: 400,
+                      // fit: BoxFit.fill,
+                    ),
+                  ),
+                ],
+              ),
+      ),
     );
   }
 }
